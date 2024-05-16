@@ -81,6 +81,10 @@ module.exports = defineConfig({
       };
 
       on("task", {
+        log(message) {
+          console.log(message);
+          return null;
+        },
         percyHealthCheck,
         async "db:seed"() {
           // seed database with test data
